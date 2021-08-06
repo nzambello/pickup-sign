@@ -1177,6 +1177,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/inter@^4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-4.5.0.tgz#b99e49fa178e4086250fb3df2ed6a7366c9a0cb5"
+  integrity sha512-2efK8Ru0LkuOYrEpiHPlV02YkTdIKGbezlxVNeA8/3c+tNt7P2aQPuiYYkVy7N4GA5LWSUVcLL/91MpCIjinOw==
+
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@hapi/address/-/address-2.1.4.tgz#5d67ed43f3fd41a69d4b9ff7b56e7c0d1d0a81e5"
@@ -9041,6 +9046,13 @@ react-scripts@4.0.3:
   optionalDependencies:
     fsevents "^2.1.3"
 
+react-text-on-svg@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-text-on-svg/-/react-text-on-svg-1.0.1.tgz#bd1e4254f12cf6d7d5011aa3eb6996807acea0f2"
+  integrity sha1-vR5CVPEs9tfVARqj62mWgHrOoPI=
+  dependencies:
+    svg-text-wrap "^0.0.1"
+
 react@^17.0.2:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react/-/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
@@ -10268,6 +10280,18 @@ svg-parser@^2.0.2:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/svg-parser/-/svg-parser-2.0.4.tgz#fdc2e29e13951736140b76cb122c8ee6630eb6b5"
   integrity sha512-e4hG1hRwoOdRb37cIMSgzNsxyzKfayW6VOflrwvR+/bzrkyxY/31WkbgnQpgtrNp1SdpJvpUAGTa/ZoiPNDuRQ==
+
+svg-text-size@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/svg-text-size/-/svg-text-size-0.0.1.tgz#5c7252de6bf3193e781447a021346a0b848d68b1"
+  integrity sha1-XHJS3mvzGT54FEegITRqC4SNaLE=
+
+svg-text-wrap@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/svg-text-wrap/-/svg-text-wrap-0.0.1.tgz#253c4706863b5ade2442c03fe9a869bbd151b221"
+  integrity sha1-JTxHBoY7Wt4kQsA/6ahpu9FRsiE=
+  dependencies:
+    svg-text-size "0.0.1"
 
 svgo@^1.0.0, svgo@^1.2.2:
   version "1.3.2"
