@@ -38,7 +38,10 @@ const App = () => {
               placeholder="Nome Cognome"
               className="input"
             />
-            <button className={text?.length === 0 ? 'link-disabled' : 'link'} onClick={() => setActiveSign(true)}>
+            <button className={text?.length === 0 ? 'link-disabled' : 'link'} onClick={() => {
+              setText(text.trim());
+              setActiveSign(true);
+            }}>
               Mostra
             </button>
           </React.Fragment>
