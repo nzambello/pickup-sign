@@ -38,6 +38,7 @@ const App = () => {
                 onChange={(e) => setText(e.target.value)}
                 placeholder="Nome Cognome"
                 className="input"
+                autocomplete="off"
               />
               <button
                 type="submit"
