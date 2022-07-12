@@ -1,26 +1,26 @@
-import React from 'react'
-import TextOnSvg from 'react-text-on-svg'
-import useStayAwake from './useStayAwake'
-import '@fontsource/inter'
-import './App.css'
+import React from "react";
+import TextOnSvg from "react-text-on-svg";
+import useStayAwake from "./useStayAwake";
+import "@fontsource/inter";
+import "./App.css";
 
 const App = () => {
-  const [text, setText] = React.useState('')
-  const [activeSign, setActiveSign] = React.useState(false)
+  const [text, setText] = React.useState("");
+  const [activeSign, setActiveSign] = React.useState(false);
 
-  const device = useStayAwake()
+  const device = useStayAwake();
 
   React.useEffect(() => {
     if (device.canSleep) {
-      device.preventSleeping()
+      device.preventSleeping();
     }
 
     return () => {
       if (device.canSleep) {
-        device.allowSleeping()
+        device.allowSleeping();
       }
-    }
-  }, [])
+    };
+  }, []);
 
   return (
     <div className="container">
@@ -31,19 +31,26 @@ const App = () => {
 
             <p className="description">Scrivi il nome del passeggero/cliente</p>
 
-            <input
-              type="text"
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-              placeholder="Nome Cognome"
-              className="input"
-            />
-            <button className={text?.length === 0 ? 'link-disabled' : 'link'} onClick={() => {
-              setText(text.trim());
-              setActiveSign(true);
-            }}>
-              Mostra
-            </button>
+            <form>
+              <input
+                type="text"
+                value={text}
+                onChange={(e) => setText(e.target.value)}
+                placeholder="Nome Cognome"
+                className="input"
+              />
+              <button
+                type="submit"
+                disabled={text?.length === 0}
+                className={text?.length === 0 ? "link-disabled" : "link"}
+                onClick={() => {
+                  setText(text.trim());
+                  setActiveSign(true);
+                }}
+              >
+                Mostra
+              </button>
+            </form>
           </React.Fragment>
         ) : (
           <React.Fragment>
@@ -65,7 +72,7 @@ const App = () => {
         )}
       </main>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
